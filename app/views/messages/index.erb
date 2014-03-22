@@ -1,1 +1,11 @@
 <h1>All Messages</h1>
+<hr/>
+
+<% @messages.each do |message| %>
+  <div class="message">
+    <h3><%= message.title %> <small>(by: <%= message.author %>)</small></h3>
+    <p>
+      <%= message.content %>
+    </p>
+  </div>
+<% end %>
