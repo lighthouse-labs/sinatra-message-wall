@@ -1,6 +1,17 @@
 <h1>Post a Message</h1>
 <hr/>
 
+<% if @message && @message.errors.any? %>
+  <div>
+    <strong>Some issues with your message, please fix them:</strong>
+    <ul>
+      <% @message.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <form method="post" action="/messages">
   <div>
     <label>Author:</label>
