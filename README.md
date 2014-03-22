@@ -1,4 +1,4 @@
-Sinatra
+Sinatra - Forum Tutorial
 =============
 
 Brought to you by Lighthouse Labs
