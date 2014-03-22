@@ -15,17 +15,17 @@
 <form method="post" action="/messages">
   <div>
     <label>Author:</label>
-    <input type="text" name="author">
+    <input type="text" name="author" value="<%= @message && @message.author %>">
   </div>
   <div>
     <label>Title:</label>
-    <input type="text" name="title">
+    <input type="text" name="title" value="<%= @message && @message.title %>">
   </div>
   <div>
     <label>Content:</label>
-    <input type="text" name="content">
+    <input type="text" name="content" value="<%= @message && @message.content %>">
   </div>
   <div>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" >
   </div>
 </form>
