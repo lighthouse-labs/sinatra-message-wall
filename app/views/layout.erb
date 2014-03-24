@@ -18,9 +18,13 @@
   <title></title>
 </head>
 <body>
-  <nav>
-    Please <a href="/login">Log In</a> or <a href="/signup">Sign up</a>
-  </nav>
+  <header>
+    <% if session[:user_id] %>
+      Welcome kvirani@gmail.com
+    <% else %>
+      Please <a href="/login">Log In</a> or <a href="/signup">Sign up</a>
+    <% end %>
+  </header>
 
   <%= yield %>
 </body>
