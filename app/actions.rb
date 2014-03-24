@@ -36,3 +36,18 @@ end
 get '/signup' do
   erb :'auth/signup'
 end
+
+post '/signup' do
+  @user = User.new(
+    email: params[:email],
+    password: params[:password]
+  )
+
+  if @user.save
+    session[:user_id] = @user.id
+    redirect '/'
+  else
+    erb :'auth/signup'
+  end
+
+end
