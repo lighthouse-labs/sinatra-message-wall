@@ -19,8 +19,8 @@
 </head>
 <body>
   <header>
-    <% if session[:user_id] %>
-      Welcome kvirani@gmail.com
+    <% if current_user %>
+      Welcome <%= current_user.email %>
     <% else %>
       Please <a href="/login">Log In</a> or <a href="/signup">Sign up</a>
     <% end %>
