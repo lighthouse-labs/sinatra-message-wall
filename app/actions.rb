@@ -30,3 +30,9 @@ post '/messages' do
     erb :'messages/new'
   end
 end
+
+### AUTHENTICATION ACTIONS
+
+get '/signup' do
+  erb :'auth/signup'
+end
