@@ -20,7 +20,8 @@
 <body>
   <header>
     <% if current_user %>
-      Welcome <%= current_user.email %>
+      Welcome <%= current_user.email %>,
+      <a href="/logout">Logout</a>
     <% else %>
       Please <a href="/login">Log In</a> or <a href="/signup">Sign up</a>
     <% end %>
