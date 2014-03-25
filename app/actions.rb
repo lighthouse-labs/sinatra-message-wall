@@ -11,6 +11,11 @@ get '/' do
   erb :index
 end
 
+get '/users' do
+  @users = User.all
+  erb :'users/index'
+end
+
 get '/messages' do
   @messages = Message.all
   erb :'messages/index'
@@ -38,6 +43,8 @@ post '/messages' do
     erb :'messages/new'
   end
 end
+
+
 
 ### AUTHENTICATION ACTIONS
 
