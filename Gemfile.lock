@@ -21,6 +21,8 @@ GEM
     backports (3.4.0)
     bond (0.4.3)
     builder (3.1.4)
+    carmen (1.0.1)
+      unicode_utils (~> 1.4.0)
     coderay (1.1.0)
     i18n (0.6.9)
     method_source (0.8.2)
@@ -73,12 +75,14 @@ GEM
       ripl-rack (>= 0.2.0)
       sinatra (>= 1.2.1)
     tzinfo (0.3.39)
+    unicode_utils (1.4.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   activesupport
+  carmen
   pry
   puma
   rake
