@@ -24,7 +24,7 @@
     <% if current_user %>
       Welcome <%= current_user.email %>,
       <form method="post" action="/logout">
-        <input type="submit" value="Logout">
+        <input type="submit" value="Logout" class="btn btn-primary">
       </form>
     <% else %>
       Please <a href="/login">Log In</a> or <a href="/signup">Sign up</a>
