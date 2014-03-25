@@ -25,4 +25,9 @@ end
 require APP_ROOT.join('config', 'database')
 
 # Load the routes / actions
-require APP_ROOT.join('app', 'actions')
+require APP_ROOT.join('app', 'helpers')
+
+require APP_ROOT.join('app', 'actions', 'authentication')
+require APP_ROOT.join('app', 'actions', 'home')
+require APP_ROOT.join('app', 'actions', 'users')
+require APP_ROOT.join('app', 'actions', 'messages')
