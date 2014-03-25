@@ -31,6 +31,7 @@ get '/messages/:id' do
   erb :'messages/show'
 end
 
+# Submit/Create a message on the wall
 post '/messages' do
   @message = Message.new(
     title:   params[:title],
