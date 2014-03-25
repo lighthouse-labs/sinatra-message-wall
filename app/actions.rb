@@ -37,6 +37,8 @@ post '/messages' do
     content: params[:content],
     author:  params[:author]
   )
+  @message.user = current_user
+
   if @message.save
     redirect '/messages'
   else
