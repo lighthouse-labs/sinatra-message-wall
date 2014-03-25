@@ -40,10 +40,16 @@ post '/messages' do
   @message.user = current_user
 
   if @message.save
+    current_user.message_count += 1
+    current_user.save
     redirect '/messages'
   else
+
     erb :'messages/new'
   end
+
+
+
 end
 
 
