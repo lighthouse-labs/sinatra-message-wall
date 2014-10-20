@@ -4,6 +4,9 @@
 <% @messages.each do |message| %>
   <div class="message">
     <h3><a href="/messages/<%= message.id %>"><%= message.title %></a> <small>(by: <%= message.author %>)</small></h3>
+    <form action="/messages/<%= message.id %>/upvotes" method="post">
+      <input type='submit' value='Upvote'> (<%= message.upvotes || 0 %> votes)
+    </form>
     <p>
       <%= message.content %>
     </p>

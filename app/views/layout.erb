@@ -19,5 +19,9 @@
 </head>
 <body>
   <%= yield %>
+  <footer>
+
+    Logged in as <%= session[:user] %>
+  </footer>
 </body>
 </html>
